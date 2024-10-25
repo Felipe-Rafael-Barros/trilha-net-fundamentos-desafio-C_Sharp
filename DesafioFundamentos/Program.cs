@@ -1,4 +1,5 @@
-﻿using DesafioFundamentos.Models;
+﻿using System.Data;
+using DesafioFundamentos.Models;
 
 // Coloca o encoding para UTF8 para exibir acentuação
 Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -6,7 +7,8 @@ Console.OutputEncoding = System.Text.Encoding.UTF8;
 decimal precoInicial = 0;
 decimal precoPorHora = 0;
 
-Console.WriteLine("Seja bem vindo ao sistema de estacionamento!\n" +
+Console.WriteLine("\nCurso C# DIO - Projeto Concluido por: Felipe Rafael Barros\n");
+Console.WriteLine("Seja bem vindo ao sistema de estacionamento!  \n" +
                   "Digite o preço inicial:");
 precoInicial = Convert.ToDecimal(Console.ReadLine());
 
@@ -18,6 +20,8 @@ Estacionamento es = new Estacionamento(precoInicial, precoPorHora);
 
 string opcao = string.Empty;
 bool exibirMenu = true;
+
+
 
 // Realiza o loop do menu
 while (exibirMenu)
@@ -33,6 +37,7 @@ while (exibirMenu)
     {
         case "1":
             es.AdicionarVeiculo();
+
             break;
 
         case "2":
@@ -41,6 +46,8 @@ while (exibirMenu)
 
         case "3":
             es.ListarVeiculos();
+
+            
             break;
 
         case "4":
